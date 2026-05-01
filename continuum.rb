@@ -5,13 +5,13 @@
 class Continuum < Formula
   desc "Terminal-first context orchestration for AI-assisted development."
   homepage "https://github.com/simoneaveotti/continuum"
-  version "0.6.4"
+  version "0.6.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.4/ctx_0.6.4_darwin_amd64.tar.gz"
-      sha256 "46f19420950ddca256346ab5073953243710b946a06ed8804063b145f17a33c6"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.5/ctx_0.6.5_darwin_amd64.tar.gz"
+      sha256 "62a273ff312307d5e34302080aa33b6a10a95466802cda8d4ded7732667eb811"
 
       define_method(:install) do
         bin.install "ctx"
@@ -19,8 +19,8 @@ class Continuum < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.4/ctx_0.6.4_darwin_arm64.tar.gz"
-      sha256 "ac365532e0678d1ee8838bff480f8a485713ee653e011f1ffb9f4cf5344db302"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.5/ctx_0.6.5_darwin_arm64.tar.gz"
+      sha256 "f5b1b1719700792fd007f1829c8c7a6a3141c65f9182ba687310910866bc8dad"
 
       define_method(:install) do
         bin.install "ctx"
@@ -31,16 +31,16 @@ class Continuum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.4/ctx_0.6.4_linux_amd64.tar.gz"
-      sha256 "bb649975b21826421ab827396cdf47c46d4678061de6881735b6bc417eac9662"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.5/ctx_0.6.5_linux_amd64.tar.gz"
+      sha256 "6c4938262fd692cc0071677819d1564ebea34de68cc6bfe66146a3da05c151ee"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.4/ctx_0.6.4_linux_arm64.tar.gz"
-      sha256 "f38a0a5c602e8ab76de9a83908643fb4b201c1e32d9c37ed5e89e4d83caffbda"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.5/ctx_0.6.5_linux_arm64.tar.gz"
+      sha256 "a4ee6f3f7e22fe2f9f53530c73a77fd5de42b34a238ea23d8529d433ae0ba0b3"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
