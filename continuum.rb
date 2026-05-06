@@ -11,7 +11,7 @@ class Continuum < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.8/ctx_0.6.8_darwin_amd64.tar.gz"
-      sha256 "4574482a61f407cc34f95007f772616c60919d562317e55b7f66ccc9a465ec2e"
+      sha256 "5428323a75ac9bb11c18a2ce801ef2fd21df3102037d811f7909409dcfb36205"
 
       define_method(:install) do
         bin.install "ctx"
@@ -20,7 +20,7 @@ class Continuum < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.8/ctx_0.6.8_darwin_arm64.tar.gz"
-      sha256 "56a26f4ca73a8c15562912be9e0791be4aefac675ba2a62f35e3d55434481201"
+      sha256 "d87afd24066dbc092d180925e8248e2df5250305dcc865be743a330fea49a269"
 
       define_method(:install) do
         bin.install "ctx"
@@ -32,7 +32,7 @@ class Continuum < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.8/ctx_0.6.8_linux_amd64.tar.gz"
-      sha256 "a302f34ac072344ec2a692a88dce2d2a03cca040190290ead85da38da59a631f"
+      sha256 "f82257c1cdb1ffebbb61b942105c300ffb121e3d642255aa5e920b25e47c9328"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
@@ -40,7 +40,7 @@ class Continuum < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.8/ctx_0.6.8_linux_arm64.tar.gz"
-      sha256 "20501d18a0376f0e63b7e40cca82fe327e7dd984cdd7a5282545e73838f9237c"
+      sha256 "c1f9dfc53db7cc905ab9e6328004929fe73b3ac04f7394f3535e5ab01943d0b7"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
