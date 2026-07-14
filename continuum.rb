@@ -5,13 +5,13 @@
 class Continuum < Formula
   desc "Terminal-first context orchestration for AI-assisted development."
   homepage "https://github.com/simoneaveotti/continuum"
-  version "0.6.12"
+  version "0.6.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.12/ctx_0.6.12_darwin_amd64.tar.gz"
-      sha256 "f52e3e62173e43e698cdb7bcb1f2999dfea03a436492dde2553f5395c3cc7635"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.13/ctx_0.6.13_darwin_amd64.tar.gz"
+      sha256 "9693d8ad9598b1c21433449207a039630b19e32abe858a008c76f967c492282b"
 
       define_method(:install) do
         bin.install "ctx"
@@ -19,8 +19,8 @@ class Continuum < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.12/ctx_0.6.12_darwin_arm64.tar.gz"
-      sha256 "01903cc339bd60c9ae312e0bb84147003c2440894dfa290e0144b592f189fc99"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.13/ctx_0.6.13_darwin_arm64.tar.gz"
+      sha256 "252fc35aa82121ef42ebce829a4d5d31876b2ed6a0859eabba47a4e3ffae3d09"
 
       define_method(:install) do
         bin.install "ctx"
@@ -31,16 +31,16 @@ class Continuum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.12/ctx_0.6.12_linux_amd64.tar.gz"
-      sha256 "6b1ac87c16ec569863363f692fc5f0a465abd1c776a91751482645b4d1969356"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.13/ctx_0.6.13_linux_amd64.tar.gz"
+      sha256 "46a5492fdf7544ef299229cb6eeb382baddfdb04f366f1cb06195fcb63b54a80"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.12/ctx_0.6.12_linux_arm64.tar.gz"
-      sha256 "a56e46c7de5a4e37602035ffcc0f2ff56a44d2f383ce1280c19b656c42f926cf"
+      url "https://github.com/simoneaveotti/continuum/releases/download/v0.6.13/ctx_0.6.13_linux_arm64.tar.gz"
+      sha256 "b0fa6fe856358646fe8b9a9fea53489207e673d3108b3944999efa26ad71c826"
       define_method(:install) do
         bin.install "ctx"
         pkgshare.install "templates"
